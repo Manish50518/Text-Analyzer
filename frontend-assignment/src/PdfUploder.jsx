@@ -3,6 +3,7 @@ import { useState } from "react";
 import FileData from "./FileData";
 import axios from "axios";
 import SummerisedData from "./SummerisedData";
+import { apiURL } from "./const";
 
 function Pdfuploader() {
   const [file, setFile] = useState(null);
@@ -23,13 +24,10 @@ function Pdfuploader() {
       const formData = new FormData();
       formData.append("file", file);
 
-      const data = await axios.post(
-        "http://192.168.0.101:8000/upload",
-        formData
-      );
+      const data = await axios.post(`${apiURL}/upload`, formData);
 
       setFileData(data.data.contents);
-      const summerised = await axios.post("http://192.168.0.101:8000/predict", {
+      const summerised = await axios.post(`${apiURL}/predict`, {
         text: data.data.contents,
       });
 
