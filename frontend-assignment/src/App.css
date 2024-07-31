@@ -1,0 +1,89 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.add-form {
+  background-color: #e5771f;
+  padding: 2.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+form {
+  background-color: rgb(13, 81, 81);
+  display: flex;
+  justify-content: center;
+  padding: 20%;
+  margin-bottom: 10px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.display-component {
+  width: 50%;
+  padding: 10px;
+}
+
+.summerised-data {
+  width: 50%;
+  padding: 10px;
+}
+
+.components {
+  display: flex;
+  background-color: #f1f3f5;
+  width: 100%;
+  justify-content: space-around;
+  text-align: justify;
+}
+.summerised-data {
+  width: 50%;
+}
+
+.display-component {
+  width: 50%;
+}
